@@ -1,0 +1,29 @@
+ 
+ <div class="col-md-10 offset-md-2">
+ <table class="table table-striped w-auto table-hover">
+
+    <thead>
+      <tr>
+      
+        <th>Author</th>
+        <th>language</th>
+        <th>pages</th>
+        <th>title</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info" *ngFor= "let bo of book">
+      
+        <td>{{bo.author}}</td>
+        <td>{{bo.language}}</td>
+        <td>{{bo.pages}}</td>
+        <td>{{bo.title}}</td>
+
+        <td>
+            <button (click)="Wishlist(bo.id)" class="btn btn-info" >Wishlist</button>
+             <button (click)="Completed(bo.id)" class="btn btn-danger" style="margin-left:15px">Completed</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
